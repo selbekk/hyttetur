@@ -1,12 +1,7 @@
 /* slides */
 
-#slide-1 .bcg {
-    background-image:url('../img/view-from-docks.jpg')
+#home {
+    z-index: 9;
 }
 
-#slide-2 .bcg {
-    background: none;
-    background-color: #010101;
-    height: 310px;
-    text-align: center
-}
+#
