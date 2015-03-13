@@ -3,25 +3,21 @@
 /* Learn for yourself at http://keithclark.co.uk/articles/pure-css-parallax-websites/ */
 
 .parallax {
-    perspective: 300px;
+    height: 500px; /* fallback for older browsers */
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    perspective-origin-x: 100%;
+    perspective: 300px;
 }
 
 /* A set of layers */
 .parallax .parallax-group {
     position: relative;
+    height: 500px; /* fallback for older browsers */
     height: 100vh;
     transform-style: preserve-3d;
-    transform-origin-x: 100%;
 
     transition: transform .5s ease-out;
-}
-
-.parallax .parallax-group .parallax-group-half-page {
-    height: 50vh;
 }
 
 .parallax .parallax-layer {
@@ -49,22 +45,22 @@
 
 /* Modifier classes (decide depth of layer) */
 
-.parallax .parallax-layer-front {
-    transform: translateZ(90px) scale(.7);
-    z-index: 1;
+.parallax-layer-front {
+  transform: translateZ(90px) scale(.7);
+  z-index: 1;
 }
 
-.parallax .parallax-layer-base {
-    transform: translateZ(0);
-    z-index: 4;
+.parallax-layer-base {
+  transform: translateZ(0);
+  z-index: 4;
 }
 
-.parallax .parallax-layer-back {
-    transform: translateZ(-300px) scale(2);
-    z-index: 3;
+.parallax-layer-back {
+  transform: translateZ(-300px) scale(2);
+  z-index: 3;
 }
 
-.parallax .parallax-layer-deep {
-    transform: translateZ(-600px) scale(3);
-    z-index: 2;
+.parallax-layer-deep {
+  transform: translateZ(-600px) scale(3);
+  z-index: 2;
 }
