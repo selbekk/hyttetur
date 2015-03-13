@@ -42,7 +42,7 @@ gulp.task('bower:copy', function () {
 // Watch for changes
 gulp.task('watch', function() {
     console.log('watching for changes...')
-    gulp.watch('src/css', ['clean', 'style']);
+    gulp.watch('src/css/**', ['clean', 'style']);
     gulp.watch('bower.json', ['bower']);
 });
 
