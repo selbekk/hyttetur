@@ -21,33 +21,47 @@
     transition: transform .5s ease-out;
 }
 
-.debug .parallax .parallax-group {
-    transform: translate3d(700px, 0, -800px) rotateY(30deg);
-}
-
 .parallax .parallax-group .parallax-group-half-page {
     height: 50vh;
 }
 
-/* A layer */
 .parallax .parallax-layer {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+
+    transition: .5s ease-out;
+}
+
+/* Debug effect */
+.debug .parallax .parallax-group {
+    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+}
+
+.debug .parallax .parallax-group .parallax-layer {
+    box-shadow: 0 0 0 2px #000;
+    opacity: 0.9;
 }
 
 /* Modifier classes (decide depth of layer) */
 
+.parallax .parallax-layer-front {
+    transform: translateX(90px) scale(.7);
+}
+
 .parallax .parallax-layer-base {
     transform: translateZ(0);
+    z-index: 4;
 }
 
 .parallax .parallax-layer-back {
     transform: translateZ(-1px) scale(2);
+    z-index: 3;
 }
 
 .parallax .parallax-layer-deep {
     transform: translateZ(-2px) scape(3);
+    z-index: 2;
 }
