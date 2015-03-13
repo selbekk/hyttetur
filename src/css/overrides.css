@@ -1,0 +1,17 @@
+/* Overrides of library styles */
+
+.btn {
+    border-radius: 0;
+
+    transition: all .3s ease-out;
+}
+
+.btn-cta {
+    border: 0;
+    background-color: #27ae60;
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+    background-color: #2ecc71;
+}

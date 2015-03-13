@@ -1,0 +1,42 @@
+/* Icon styles */
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+}
+
+.icons.large .icon {
+    width: 50px;
+    height: 50px;
+}
+
+.icons.spaced .icon {
+    margin: 0 30px;
+}
+
+/* Individual icons */
+
+.icon.icon-champagne {
+    background: transparent url(../img/icons/champagne-50.png) center center no-repeat;
+}
+
+.icon.icon-dancing {
+    background: transparent url(../img/icons/dancing-50.png) center center no-repeat;
+}
+
+.icon.icon-dj {
+    background: transparent url(../img/icons/dj-50.png) center center no-repeat;
+}
+
+.icon.icon-sun {
+    background: transparent url(../img/icons/sun-50.png) center center no-repeat;
+}
+
+.icon.icon-sunglasses {
+    background: transparent url(../img/icons/sun-glasses-50.png) center center no-repeat;
+}
+
+.icon.icon-yacht {
+    background: transparent url(../img/icons/yacht-50.png) center center no-repeat;
+}
