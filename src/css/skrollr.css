@@ -26,9 +26,3 @@
     height: 100%;
     width: 100%;
 }
-
-/* slides */
-
-#slide-1 .bcg {
-    background-image:url('../img/view-from-docks.jpg')
-}
