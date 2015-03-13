@@ -1,0 +1,25 @@
+{
+  "name": "hyttetur",
+  "version": "1.0.0",
+  "description": "a simple page to promote cabin trip",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selbekk/hyttetur.git"
+  },
+  "keywords": [
+    "hyttetur",
+    "single",
+    "page",
+    "app"
+  ],
+  "author": "selbekk <kristofer.selbekk@bekk.no>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selbekk/hyttetur/issues"
+  },
+  "homepage": "https://github.com/selbekk/hyttetur"
+}
