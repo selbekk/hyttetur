@@ -1,7 +1,11 @@
 /* slides */
 
 #home {
-    z-index: 9;
+    z-index: 5;
 }
 
-#
+#what {
+    z-index: 4;
+    background-color: #ecf0f1;
+    color: #333;
+}

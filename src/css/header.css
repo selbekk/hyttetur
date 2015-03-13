@@ -5,9 +5,9 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 100;
 
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(30,30,30,1);
     color: white;
     padding: 10px 0;
 }
@@ -27,4 +27,23 @@
 #main-header #main-nav ul li a {
     display: block;
     padding: 10px 20px;
+    color: white;
+    transition: all .3s ease-out;
+
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#main-header #main-nav ul li a:hover,
+#main-header #main-nav ul li a:focus {
+    background: rgba(20,20,20,1);
+}
+
+#debug {
+    color: #333;
+}
+
+.debug #debug {
+    background: red;
+    color: white;
 }

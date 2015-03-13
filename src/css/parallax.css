@@ -17,6 +17,12 @@
     height: 100vh;
     transform-style: preserve-3d;
     transform-origin-x: 100%;
+
+    transition: transform .5s ease-out;
+}
+
+.debug .parallax .parallax-group {
+    transform: translate3d(700px, 0, -800px) rotateY(30deg);
 }
 
 .parallax .parallax-group .parallax-group-half-page {
