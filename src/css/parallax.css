@@ -3,7 +3,7 @@
 /* Learn for yourself at http://keithclark.co.uk/articles/pure-css-parallax-websites/ */
 
 .parallax {
-    perspective: 1px;
+    perspective: 200px;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
@@ -52,6 +52,7 @@
 
 .parallax .parallax-layer-front {
     transform: translateX(90px) scale(.7);
+    z-index: 10;
 }
 
 .parallax .parallax-layer-base {

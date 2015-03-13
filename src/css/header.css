@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 1000;
 
     background-color: rgba(50,50,50,1);
     color: white;
@@ -45,6 +45,10 @@
 
 .debug #main-header #main-nav ul li a#debug:hover,
 .debug #main-header #main-nav ul li a#debug:active {
-    background: red;
+    color: #999;
+}
+
+.debug #main-header #main-nav ul li a#debug.on {
+    background-color: #c0392b;
     color: white;
 }
