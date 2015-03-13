@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     cssPrefixed = require('gulp-autoprefixer')
     del = require('del'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    uglify = require('gulp-uglify');
 
 // Clean build
 gulp.task('clean', function(cb) {
