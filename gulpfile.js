@@ -4,9 +4,10 @@ var gulp = require('gulp'),
     changed = require('gulp-changed'),
     concat = require('gulp-concat'),
     plumber = require('gulp-plumber'),
-    minifyCss = requie('gulp-minify-css'),
+    minifyCss = require('gulp-minify-css'),
+    cssPrefixed = require('gulp-autoprefixer')
     del = require('del');
- 
+
 // Clean build
 gulp.task('clean', function(cb) {
 	del(['src/assets'], cb);
