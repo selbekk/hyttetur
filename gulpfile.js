@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     minifyCss = require('gulp-minify-css'),
     cssPrefixed = require('gulp-autoprefixer')
-    del = require('del');
+    del = require('del'),
+    jshint = require('gulp-jshint');
 
 // Clean build
 gulp.task('clean', function(cb) {
@@ -14,6 +15,16 @@ gulp.task('clean', function(cb) {
 	del(['src/assets'], cb);
 });
 
+// JS build
+gulp.task('script', function() {
+    return gulp.src('src/js/**.js')
+        .pipe(plumber())
+        .pipe(jshint())
+        .pipe(uglify())
+        .pipe(concat('scripts.min.js'))
+        .pipe(gulp.dest('src/assets/'));
+
+});
 
 // CSS build
 gulp.task('style', function () {
@@ -42,8 +53,9 @@ gulp.task('bower:copy', function () {
 // Watch for changes
 gulp.task('watch', function() {
     console.log('watching for changes...')
-    gulp.watch('src/css/**', ['clean', 'style']);
+    gulp.watch('src/css/**', ['build']);
     gulp.watch('bower.json', ['bower']);
+    gulp.watch('src/js/**', ['build']);
 });
 
 // Web server
@@ -57,4 +69,5 @@ gulp.task('serve', function() {
 
 // Combos
 gulp.task('bower', ['bower:wire', 'bower:copy']);
+gulp.task('build', ['clean', 'style', 'script']);
 gulp.task('default', ['bower', 'clean', 'style', 'serve', 'watch']);
