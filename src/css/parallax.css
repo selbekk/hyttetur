@@ -3,9 +3,8 @@
 /* Learn for yourself at http://keithclark.co.uk/articles/pure-css-parallax-websites/ */
 
 .parallax {
-    perspective: 200px;
+    perspective: 300px;
     height: 100vh;
-    width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;
     perspective-origin-x: 100%;
@@ -40,7 +39,7 @@
 }
 
 .debug .parallax .parallax-group {
-    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+    transform: translate3d(1200px, 0, -1200px) rotateY(30deg);
 }
 
 .debug .parallax .parallax-group .parallax-layer {
@@ -51,8 +50,8 @@
 /* Modifier classes (decide depth of layer) */
 
 .parallax .parallax-layer-front {
-    transform: translateX(90px) scale(.7);
-    z-index: 10;
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
 }
 
 .parallax .parallax-layer-base {
@@ -61,11 +60,11 @@
 }
 
 .parallax .parallax-layer-back {
-    transform: translateZ(-1px) scale(2);
+    transform: translateZ(-300px) scale(2);
     z-index: 3;
 }
 
 .parallax .parallax-layer-deep {
-    transform: translateZ(-2px) scape(3);
+    transform: translateZ(-600px) scale(3);
     z-index: 2;
 }
