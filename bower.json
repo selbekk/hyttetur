@@ -1,0 +1,18 @@
+{
+  "name": "hyttetur",
+  "version": "1.0.0",
+  "homepage": "https://github.com/selbekk/hyttetur",
+  "authors": [
+    "selbekk <kristofer.selbekk@bekk.no>"
+  ],
+  "description": "A website for a cabin trip",
+  "main": "src/index.html",
+  "keywords": [
+    "hyttetur",
+    "cabin",
+    "trip",
+    "yolo"
+  ],
+  "license": "MIT",
+  "private": true
+}
