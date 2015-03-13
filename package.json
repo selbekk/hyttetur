@@ -24,7 +24,8 @@
   "homepage": "https://github.com/selbekk/hyttetur",
   "devDependencies": {
     "bower": "^1.3.12",
-    "gulp": "^3.8.11"
+    "gulp": "^3.8.11",
+    "gulp-server-livereload": "^1.2.1"
   },
   "dependencies": {
     "wiredep": "^2.2.2"
