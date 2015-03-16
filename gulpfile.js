@@ -18,6 +18,7 @@ gulp.task('clean', function(cb) {
 
 // JS build
 gulp.task('script', function() {
+    console.log('compiling javascripts')
     return gulp.src('src/js/**.js')
         .pipe(plumber())
         .pipe(jshint())
@@ -39,16 +40,9 @@ gulp.task('style', function () {
  });
 
 // Bower stuff
-gulp.task('bower:wire', function() {
+gulp.task('bower', function() {
     console.log('wiring in any new bower dependencies');
 	wiredep({src: './src/*.html', dest: './src/*.html'});
-});
-
-gulp.task('bower:copy', function () {
-    console.log('copying any new bower components');
-    gulp.src('bower_components/**')
-        .pipe(changed('src/bower_components'))
-        .pipe(gulp.dest('src/bower_components'));
 });
 
 // Watch for changes
@@ -69,6 +63,5 @@ gulp.task('serve', function() {
 });
 
 // Combos
-gulp.task('bower', ['bower:wire', 'bower:copy']);
 gulp.task('build', ['clean', 'style', 'script']);
 gulp.task('default', ['bower', 'clean', 'style', 'serve', 'watch']);
