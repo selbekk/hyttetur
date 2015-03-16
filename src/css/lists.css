@@ -34,6 +34,11 @@
     width: 150px;
     background: #efefef;
     padding: 10px;
+    transition: all .3s ease-out;
+}
+
+.members li.member:hover {
+    box-shadow: 3px 1px 10px rgba(0,0,0,0.5);
 }
 
 .members li.member:nth-of-type(n) {
@@ -45,15 +50,24 @@
 }
 
 .members li.member:nth-of-type(3n) {
-    transform: rotate(0deg);
+    transform: rotate(1deg);
 }
 
 .members li.member:nth-of-type(4n) {
     transform: rotate(3deg);
 }
 
+.members li.member:nth-of-type(5n) {
+    transform: rotate(-3deg);
+}
+
 .members li.member img {
     width: 100%;
+    transition: all .3s ease-out;
+}
+
+.members li.member:hover img {
+    filter: sepia(1);
 }
 
 .members li.member .name {
