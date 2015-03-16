@@ -1,0 +1,23 @@
+.directions {
+    text-align: left;
+    font-size: 120%;
+}
+
+.directions li {
+    line-height: 150%;
+}
+
+.directions li.list-group-item  {
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+
+.directions li.list-group-item .glyphicon {
+    color: #ddd;
+    margin-right: 20px;
+    transition: all .3s ease-out;
+}
+
+.directions li.list-group-item-success .glyphicon {
+    color: green;
+}
