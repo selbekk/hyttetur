@@ -1,0 +1,4 @@
+#idea-form input[type=text],
+#idea-form textarea {
+    margin: 15px 0;
+}

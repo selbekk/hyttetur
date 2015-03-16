@@ -75,3 +75,8 @@
     font-family: 'Indie Flower';
     margin: 10px 0;
 }
+
+.suggestions {
+    max-height: 420px; /* smoked */
+    overflow-y: scroll;
+}

@@ -65,6 +65,25 @@
     background-image: url(../img/beach.jpg);
 }
 
+#activities p,
+#activities h3,
+#activities #idea-form {
+    text-align: left;
+}
+
+#activities h1 {
+    color: white;
+}
+
+#activities p.lead {
+    color: white;
+}
+
+#activities .bg {
+    background-image: url(../img/old-wood-panel.jpg);
+    filter: grayscale(0.5) brightness(0.5);
+}
+
 #wow {
     color: white;
 }
