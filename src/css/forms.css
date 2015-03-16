@@ -2,3 +2,29 @@
 #idea-form textarea {
     margin: 15px 0;
 }
+
+#idea-form .mail-response {
+    background-color: #eee;
+    transform: rotate(7deg);
+    padding: 20px;
+    box-shadow: 3px 5px 10px rgba(0,0,0,0.5);
+    text-align: center;
+    margin-top: 50px;
+    cursor: default;
+}
+
+#idea-form .mail-response .feedback {
+    font-size: 1000%;
+}
+
+#idea-form .mail-response-success .feedback {
+    color: #27ae60;
+}
+
+#idea-form .mail-response-error .feedback {
+    color: #c0392b;
+}
+
+#idea-form .mail-response p {
+    text-align: center;
+}
