@@ -21,3 +21,43 @@
 .directions li.list-group-item-success .glyphicon {
     color: green;
 }
+
+.members {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.members li.member {
+    display: inline-block;
+    margin-right: 40px;
+    width: 150px;
+    background: #efefef;
+    padding: 10px;
+}
+
+.members li.member:nth-of-type(n) {
+    transform: rotate(-7deg);
+}
+
+.members li.member:nth-of-type(2n) {
+    transform: rotate(7deg);
+}
+
+.members li.member:nth-of-type(3n) {
+    transform: rotate(0deg);
+}
+
+.members li.member:nth-of-type(4n) {
+    transform: rotate(3deg);
+}
+
+.members li.member img {
+    width: 100%;
+}
+
+.members li.member .name {
+    text-align: center;
+    font-family: 'Indie Flower';
+    margin: 10px 0;
+}

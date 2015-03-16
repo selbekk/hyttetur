@@ -6,6 +6,12 @@
     text-transform: uppercase;
 }
 
+.bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 #home {
 
@@ -28,6 +34,10 @@
     font-weight: 300;
 }
 
+#home .bg {
+    background-image: url(../img/view-from-docks.jpg);
+}
+
 #what {
     background-color: #ecf0f1;
     color: #333;
@@ -46,12 +56,20 @@
     margin: 50px 0 100px;
 }
 
+#when .bg {
+    background-image: url(../img/the-cabin.jpg);
+}
+
 #when .jumbotron {
     background-color: rgba(255,255,255,0.5);
 }
 
 #when .jumbotron h1 {
     font-size: 400%;
+}
+
+#who .bg {
+    background-image: url(../img/beach.jpg);
 }
 
 #wow {
