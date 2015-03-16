@@ -15,9 +15,9 @@
             <header id="main-header">
                 <nav class="container" id="main-nav">
                     <ul class="navigation-links">
-                        <li><a href="#home">Toppen</a></li>
-                        <li><a href="#what">Hva</a></li>
-                        <li><a href="#where">Hvor</a></li>
+                        <li><a href="/home" data-panel="home">Toppen</a></li>
+                        <li><a href="/what" data-panel="what">Hva</a></li>
+                        <li><a href="/where" data-panel="where">Hvor</a></li>
                         <li><a href="#slide-4">Når</a></li>
                         <li><a href="#slide-5">Hvordan</a></li>
                         <li><a href="#slide-6">Hvem</a></li>
@@ -27,9 +27,10 @@
                 </nav>
             </header>
 
-            <!-- home slide -->
             <div class="parallax">
-                <section id="home" class="parallax-group">
+
+                <!-- home slide -->
+                <section id="home" class="parallax-group" data-panel="home">
                     <div class="parallax-layer parallax-layer-base">
                         <img src="img/view-from-docks.jpg" alt="Digg utsikt!" class="full-screen"/>
                     </div>
@@ -44,7 +45,7 @@
                 </section>
 
                 <!-- what slide -->
-                <section id="what" class="parallax-group">
+                <section id="what" class="parallax-group" data-panel="what">
                     <div class="parallax-layer parallax-layer-base">
                         <div class="full-screen">
                             <div class="dead-center">
@@ -71,7 +72,7 @@
                 </section>
 
                 <!-- map slide -->
-                <section id="where" class="parallax-group">
+                <section id="where" class="parallax-group" data-panel="where">
                     <div class="parallax-layer parallax-layer-deep sativa">
                     </div>
                     <div class="parallax-layer parallax-layer-base container">
