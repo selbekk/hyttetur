@@ -46,6 +46,14 @@
     margin: 50px 0 100px;
 }
 
+#when .jumbotron {
+    background-color: rgba(255,255,255,0.5);
+}
+
+#when .jumbotron h1 {
+    font-size: 400%;
+}
+
 #wow {
     color: white;
 }
