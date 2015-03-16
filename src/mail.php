@@ -27,7 +27,7 @@ $message = '<!doctype html>'.
                     '<h2>Ny idé til hytteturen fra ' . strip_tags($_POST['name']) . '</h2>'.
                     '<p>' . strip_tags($_POST['idea']) .'</p>' .
                     '<p>Husk å oppdatér websiden med idéen om den er bra!</p>'.
-                '</div>'
+                '</div>'.
             '</body>'.
             '</html>';
 
