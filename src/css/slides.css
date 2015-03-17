@@ -80,8 +80,8 @@
 }
 
 #activities .bg {
-    background-image: url(../img/old-wood-panel.jpg);
-    filter: grayscale(0.5) brightness(0.5);
+    background: url(../img/activities-bg.png) repeat top left;
+
 }
 
 #wow {
