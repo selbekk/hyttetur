@@ -5,6 +5,11 @@ if(!isset($_POST['name'], $_POST['idea'])) {
     exit();
 }
 
+if(empty($_POST['name']) || empty($_POST['idea'])) {
+    http_response_code(400);
+    exit();
+}
+
 $to = 'selbeezy@gmail.com';
 $subject = 'Ide fra hyttesiden';
 $from = 'no-reply@kristoferselbekk.com';
