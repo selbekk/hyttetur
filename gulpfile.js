@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 // Clean build
 gulp.task('clean', function(cb) {
     console.log('deleting src/assets');
-	del(['src/assets'], cb);
+	del(['src/assets/**'], cb);
 });
 
 // JS build

@@ -40,3 +40,18 @@
 .icon.icon-yacht {
     background: transparent url(../img/icons/yacht-50.png) center center no-repeat;
 }
+
+/* Super glyphs */
+
+.glyphicon.glyphicon-mega {
+    font-size: 1000%;
+    text-align: center;
+}
+
+.glyphicon.glyphicon-success {
+    color: #27ae60;
+}
+
+.glyphicon.glyphicon-error {
+    color: #c0392b;
+}

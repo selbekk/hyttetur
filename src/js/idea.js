@@ -1,4 +1,43 @@
 (function() {
+    var mailResponseTemplate = '<div class="mail-response mail-response-{{status}}">' +
+                                    '<span class="glyphicon glyphicon-{{glyphicon}} glyphicon-mega glyphicon-{{status}} shake"></span>' +
+                                    '<h2>{{header}}</h2>' +
+                                    '<p>{{body}}</p>' +
+                                '</div>';
+
+    var ideaTemplate = '<li class="suggestion list-group-item">
+                            <h3>{{idea}}</h3>
+                            <p class="name">av {{name}}</p>
+                        </li>';
+
+    function getIdeasFromServer() {
+        $.getJSON('data/ideas.json')
+            .done(dataFetched)
+            .fail(dataFetchFailed);
+    }
+
+    function dataFetched(suggestions) {
+        console.log('data: ', suggestions);
+
+        var html = '';
+        $.each(suggestions, function(i, idea) {
+            html += ideaTemplate.replace('{{idea}}', idea.idea)
+                                .replace('{{name}}', idea.name);
+        });
+        $('.suggestions').html(html);
+    }
+
+    function dataFetchFailed(a, b, c) {
+        console.log('could not fetch data:', a, b, c);
+        var html = '<div class="panel panel-danger">' +
+                    '<div class="panel-heading"><h3 class="panel-title">Åh faen..</h3></div>' +
+                    '<div class="panel-body">'+
+                        'Sorry bro, fikk ikke henta forslag. Gi\'re 5 min.<br/>' +
+                        '<span class="glyphicon glyphicon-thumbs-down glyphicon-mega glyphicon-error shake"></span>'
+                    '</div>' +
+                  '</div>';
+        $('.suggestions').html(html);
+    }
 
     function submitForm(e) {
         e.preventDefault();
@@ -11,38 +50,40 @@
             data: $form.serialize()
         };
 
-        $.when($.ajax(opts))
-            .then(mailSent, mailFailed);
+        $.ajax(opts)
+            .done(mailSent)
+            .fail(mailFailed);
     }
 
     function mailSent(e) {
-        var template = '<div class="mail-response mail-response-success">' +
-                            '<span class="feedback glyphicon glyphicon-ok shake"></span>' +
-                            '<h2>Takk for forslaget!</h2>' +
-                            '<p>Det skal vi <em>virkelig vurdere</em></p>' +
-                        '</div>';
+        var template =  mailResponseTemplate.replace('{{status}}', 'success')
+                                             .replace('{{status}}', 'success')
+                                             .replace('{{glyphicon}}', 'ok')
+                                             .replace('{{header}}', 'Takk for forslaget')
+                                             .replace('{{body}}', 'Det skal vi <em>virkelig vurdere</em>');
 
         updateView(template);
     }
 
     function mailFailed(a, b, c) {
-        console.log('mail failed to send', a, b, c);
-        var template = '<div class="mail-response mail-response-error">' +
-                            '<span class="feedback glyphicon glyphicon-thumbs-down shake"></span>' +
-                            '<h2>Kjipern!</h2>' +
-                            '<p>Noe gikk feil! Da driter vi i idéen din. Sikkert ikke no bra uansett.</p>' +
-                        '</div>';
+        var template = mailResponseTemplate.replace('{{status}}', 'error')
+                                            .replace('{{status}}', 'error')
+                                            .replace('{{glyphicon}}', 'thumbs-down')
+                                            .replace('{{header}}', 'Kjipern!')
+                                            .replace('{{body}}', 'Noe gikk feil! Da driter vi i idéen din. Sikkert ikke no bra uansett.');
 
         updateView(template);
     }
 
     function updateView(template) {
         var form = $('#idea-form');
-        form.fadeOut(500, function() {
-            form.html(template).fadeIn(500);
+        form.fadeOut(300, function() {
+            form.html(template).fadeIn(300);
         });
     }
 
     $('#idea-form').on('submit', submitForm);
     $('#idea-submit').on('click', submitForm);
+
+    getIdeasFromServer();
 })();
