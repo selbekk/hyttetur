@@ -17,8 +17,6 @@
     }
 
     function dataFetched(suggestions) {
-        console.log('data: ', suggestions);
-
         var html = '';
         $.each(suggestions, function(i, idea) {
             html += ideaTemplate.replace('{{idea}}', idea.idea)
@@ -28,7 +26,6 @@
     }
 
     function dataFetchFailed(a, b, c) {
-        console.log('could not fetch data:', a, b, c);
         var html = '<div class="panel panel-danger">' +
                     '<div class="panel-heading"><h3 class="panel-title">Åh faen..</h3></div>' +
                     '<div class="panel-body">'+

@@ -37,7 +37,7 @@ $(function() {
         if(!ids) {
             return;
         }
-        console.log('ids', ids);
+        
         $('.directions .list-group-item').each(function() {
             var $item = $(this);
             if($.inArray($item.data('item-id'), ids) > -1) {
