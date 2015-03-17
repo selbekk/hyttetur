@@ -39,6 +39,16 @@
     text-decoration: none;
 }
 
+
+#main-header #main-nav ul li a.active {
+    background-color: #c0392b;
+}
+
+#main-header #main-nav ul li a.home.active {
+    color: transparent;
+    background-color: transparent;
+}
+
 #main-header #main-nav ul li a#debug {
     color: #666;
 }
