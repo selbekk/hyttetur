@@ -3,4 +3,5 @@ bower_components
 src/bower_components
 src/assets
 
+.idea
 .DS_Store
