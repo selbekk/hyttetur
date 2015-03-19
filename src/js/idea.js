@@ -1,14 +1,14 @@
 (function() {
     var mailResponseTemplate = '<div class="mail-response mail-response-{{status}}">' +
-                                    '<span class="glyphicon glyphicon-{{glyphicon}} glyphicon-mega glyphicon-{{status}} shake"></span>' +
-                                    '<h2>{{header}}</h2>' +
-                                    '<p>{{body}}</p>' +
-                                '</div>';
+        '<span class="glyphicon glyphicon-{{glyphicon}} glyphicon-mega glyphicon-{{status}} shake"></span>' +
+        '<h2>{{header}}</h2>' +
+        '<p>{{body}}</p>' +
+        '</div>';
 
-    var ideaTemplate = '<li class="suggestion list-group-item">
-                            <h3>{{idea}}</h3>
-                            <p class="name">av {{name}}</p>
-                        </li>';
+    var ideaTemplate = '<li class="suggestion">' +
+                            '<h3>{{idea}}</h3>'+
+                            '<p class="name">av {{name}}</p>'+
+                        '</li>';
 
     function getIdeasFromServer() {
         $.getJSON('data/ideas.json')
@@ -30,7 +30,7 @@
                     '<div class="panel-heading"><h3 class="panel-title">Åh faen..</h3></div>' +
                     '<div class="panel-body">'+
                         'Sorry bro, fikk ikke henta forslag. Gi\'re 5 min.<br/>' +
-                        '<span class="glyphicon glyphicon-thumbs-down glyphicon-mega glyphicon-error shake"></span>'
+                        '<span class="glyphicon glyphicon-thumbs-down glyphicon-mega glyphicon-error shake"></span>' +
                     '</div>' +
                   '</div>';
         $('.suggestions').html(html);

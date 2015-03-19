@@ -72,12 +72,24 @@
 
 .members li.member .name {
     text-align: center;
-    font-family: 'Indie Flower';
+    font-family: 'Indie Flower', sans-serif;
     margin: 10px 0;
 }
 
 .suggestions {
     max-height: 500px;
     overflow-y: scroll;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
+.suggestions .suggestion {
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.suggestions .suggestion:last-of-type {
+    border-bottom: 0;
+}
