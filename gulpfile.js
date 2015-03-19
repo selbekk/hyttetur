@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     cssPrefixed = require('gulp-autoprefixer')
     del = require('del'),
     jshint = require('gulp-jshint'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    require('gulp-release-tasks')(gulp);
 
 // Clean build
 gulp.task('clean', function(cb) {
