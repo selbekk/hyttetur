@@ -12,11 +12,6 @@
     background-size: cover;
 }
 
-
-#home {
-
-}
-
 #home h1 {
     color: white;
 }
@@ -88,8 +83,9 @@
     color: white;
 }
 
-#wow img {
-    filter: sepia(40%);
+#wow .bg {
+    background-image: url(../img/tanning.jpg);
+    filter: sepia(.6);
 }
 
 #wow .signature {
