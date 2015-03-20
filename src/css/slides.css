@@ -1,7 +1,7 @@
-/* slides */
+/* general slide-specific styles */
 
 .parallax-layer h1, .parallax-layer h2 {
-    font-size: 500%;
+    font-size: 300%;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -12,9 +12,10 @@
     background-size: cover;
 }
 
+/* slides */
+
 #home h1 {
     color: white;
-    font-size: 300%;
 }
 
 #home h1.break-xs span {
@@ -57,14 +58,6 @@
     background-color: rgba(255,255,255,0.5);
 }
 
-#when .jumbotron h1 {
-    font-size: 400%;
-}
-
-#who h1 {
-    font-size: 300%;
-}
-
 #who .bg {
     background-image: url(../img/beach.jpg);
 }
@@ -73,11 +66,6 @@
 #activities h3,
 #activities #idea-form {
     text-align: left;
-}
-
-#activities h1 {
-    color: white;
-    font-size: 300%;
 }
 
 #activities p.lead {
@@ -106,8 +94,10 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
-    #home h1 {
+    .parallax-layer h1, .parallax-layer h2 {
         font-size: 500%;
+        font-weight: 500;
+        text-transform: uppercase;
     }
 
     #home h1.break-xs span {
@@ -116,14 +106,6 @@
 
     #home h1 em {
         display: block;
-    }
-
-    #who h1 {
-        font-size: 500%;
-    }
-
-    #activities h1 {
-        font-size: 500%;
     }
 }
 

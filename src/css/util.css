@@ -4,6 +4,7 @@
 }
 
 .dead-center {
+    width: 100%;
     text-align: center;
     position: absolute;
     left: 50%;
@@ -15,4 +16,21 @@
     left: 0;
     transform: translate(0, -50%);
     width: 100%;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .dead-center {
+        max-width: 90vw;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
 }
