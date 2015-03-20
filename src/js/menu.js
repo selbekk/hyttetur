@@ -9,4 +9,5 @@
     }
 
     $trigger.on('click', toggleMenu);
+    $menu.find('a').on('click', toggleMenu);
 })();
